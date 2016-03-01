@@ -1,14 +1,11 @@
 # vBulBot
 
-A relatively simple vBulletin spambot utilizing Python's Mechanize module. Once initiated it will select threads to spam randomly based on their thread ID.
-It does so by means of a function that randomly generates a string of digits. The URL, generated digits and a string containing ".html" are
-stored to a variable that is passed to a mechanized browser object that will open the randomly selected page and posts a predefined message.
-After one operation is completed it will loop back to generate a new thread ID and start again. 
+A relatively simple vBulletin bot utilizing Python's Mechanize module. Once initiated it will select threads to spam randomly based on their thread ID. It does so by means of a function that randomly generates a string of digits. The URL, generated digits and a string containing ".html" are stored to a variable that is passed to a mechanized browser object that will open the randomly selected page and posts a predefined message. After one operation is completed it will loop back to generate a new thread ID and start again. 
 
 # Usage
 
-To use the script you must first sign up for an account at the vBulletin based forum you intend to spam 
-when you've done so you need to change the following values within the script:
+To use the script you must first sign up for an account at the vBulletin based forum you intend to spam. 
+When you've done so you need to change the following values within the script:
 
 ```
 br.open("http://www.exampleforums.org/forums/login.php?do=login")
@@ -24,7 +21,7 @@ random_url = "http://www.exampleforums.org/forums/operating-systems/linux-1" + d
 ```
 
 Go to your target forum, open a thread and copy the URL to the first part of the string while leaving the thread ID off
-so if you had a URL that looked like this:
+so if you had an URL that looked like this:
 
 ```
 http://www.exampleforums.org/forums/operating-systems/linux-173946.html
@@ -40,6 +37,5 @@ that's passed to the digit generator function, to a lower amount.
  
 
 # Note
-The script isn't very user friendly, however i made it more or less as a personal side project. I may add some functionality that would 
-make it easier to use. Such as commandline arguments that takes in the credentials for the spam account and total number of posts to 
-be placed to give some more control over the program.
+The script isn't particularly user friendly, i made it more or less as a personal side project. I may add some functionality that would 
+make it easier to use in the future . Such as commandline arguments to take in the credentials for the account tou set up and total number of posts to be placed to give some more control over the program.
