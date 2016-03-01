@@ -59,7 +59,7 @@ def post():
 				print "\n[!]Could not find quick reply form. Unable to post on page"
 				print "\n[+]Consider inspecting selected URL manually in your browser"
 		
-				choice = raw_input("Retry? Y/n")
+				choice = raw_input("Retry? Y/n: ")
 		
 				if "y" in choice:
 					print "\nRetrying"
