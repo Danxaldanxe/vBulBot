@@ -91,9 +91,9 @@ def post():
 			print
 			print "[+]Message was posted succesfully"
 		
-		# Handle CTRL+C
-		except KeyboardInterrupt:
-			print "CTRL+C Caught, quitting"
-			break
+	# Handle CTRL+C
+	except KeyboardInterrupt:
+		print "CTRL+C Caught, quitting"
+		break
 						
 login()
