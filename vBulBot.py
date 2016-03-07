@@ -93,7 +93,7 @@ def post():
 		
 	# Handle CTRL+C
 	except KeyboardInterrupt:
-		print "CTRL+C Caught, quitting"
+		print "[!]CTRL+C Caught, quitting"
 		break
 						
 login()
