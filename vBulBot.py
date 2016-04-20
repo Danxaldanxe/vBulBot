@@ -1,4 +1,5 @@
 import os
+import sys
 import random
 import mechanize
 import time
@@ -118,6 +119,6 @@ def post():
 	# Handle CTRL+C
 	except KeyboardInterrupt:
 		print "[!]CTRL+C Caught, quitting"
-		break
+		sys.exit(0)
 						
 login()
