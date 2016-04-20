@@ -32,7 +32,7 @@ useragents = [
 # Mechanize browser and set user agent
 br = mechanize.Browser()
 br.set_handle_robots(False)
-br.addheaders = [(random.choice(useragents))]
+br.addheaders = random.choice(useragents)
 
 
 def login():
