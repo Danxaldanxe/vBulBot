@@ -16,8 +16,13 @@ br.addheaders = [('user-agent', '  Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.
 def login():
 	print "[+]Logging in."
 	
-	br.open("http://www.exampleforums.org/forums/login.php?do=login")
-    
+	try:
+		br.open("http://www.exampleforums.org/forums/login.php?do=login")
+    	except Exception as e:
+    		print "\nCould not open target URL, please reference the error message below: "
+    		print 
+    		print e
+    		
 	# Select first form(login form) and set values to the credentials -
 	# of the account made in advance for spamming purposes
 	br.form = list(br.forms())[0]
