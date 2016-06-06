@@ -52,7 +52,10 @@ def post():
 			print random_url
 
 			br.open(random_url)
-
+			
+			# Reset 'random_url' value to null
+			random_url = ""
+			
 			# Select 'vbform' which is the name of the quick reply form - 
 			# if not present we've either been banned or are otherwise - 
 			# unable to post in this thread
