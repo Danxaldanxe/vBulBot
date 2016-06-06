@@ -100,6 +100,7 @@ def post():
 	# Handle CTRL+C
 	except KeyboardInterrupt:
 		print "[!]CTRL+C Caught, quitting"
+		time.sleep(2)
 		sys.exit(0)
 						
 login()
