@@ -101,13 +101,13 @@ def post():
 			print response
 			print
 			print "[+]Message was posted succesfully"
+			
 			# Handle CTRL+C
-	except KeyboardInterrupt:
-		print "\n[!]CTRL+C Caught, quitting"
-		break
-		time.sleep(2)
-		sys.exit(0)
+		except KeyboardInterrupt:
+			print "\n[!]CTRL+C Caught, quitting"
+			break
+			time.sleep(2)
+			sys.exit(0)
 		
 
-						
 login()
