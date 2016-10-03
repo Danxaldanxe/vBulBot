@@ -48,8 +48,8 @@ def digit_generator(size=5, chars=string.digits):
 
 	
 def post():	
-	try:
-		while True:
+	while True:
+		try:
 			random_url = "http://www.exampleforums.org/forums/operating-systems/linux-1" + digit_generator(5, "0987654321") + ".html"
 			print
 			print "[+]Selected URL:" 
@@ -101,11 +101,13 @@ def post():
 			print response
 			print
 			print "[+]Message was posted succesfully"
-		
-	# Handle CTRL+C
+			# Handle CTRL+C
 	except KeyboardInterrupt:
-		print "[!]CTRL+C Caught, quitting"
+		print "\n[!]CTRL+C Caught, quitting"
+		break
 		time.sleep(2)
 		sys.exit(0)
+		
+
 						
 login()
